@@ -53,7 +53,7 @@ import ai.blackman.client.JSON;
 /**
  * CompletionRequest
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-10-18T02:08:59.049959332Z[Etc/UTC]", comments = "Generator version: 7.14.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-10-18T02:13:34.474411180Z[Etc/UTC]", comments = "Generator version: 7.14.0")
 public class CompletionRequest {
   public static final String SERIALIZED_NAME_MAX_TOKENS = "max_tokens";
   @SerializedName(SERIALIZED_NAME_MAX_TOKENS)

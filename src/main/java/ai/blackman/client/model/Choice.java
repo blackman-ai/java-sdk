@@ -50,7 +50,7 @@ import ai.blackman.client.JSON;
 /**
  * Choice
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-10-18T02:08:59.049959332Z[Etc/UTC]", comments = "Generator version: 7.14.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-10-18T02:13:34.474411180Z[Etc/UTC]", comments = "Generator version: 7.14.0")
 public class Choice {
   public static final String SERIALIZED_NAME_FINISH_REASON = "finish_reason";
   @SerializedName(SERIALIZED_NAME_FINISH_REASON)
