@@ -48,7 +48,7 @@ import ai.blackman.client.JSON;
 /**
  * SubmitFeedbackResponse
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-10-18T01:51:40.481464851Z[Etc/UTC]", comments = "Generator version: 7.14.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-10-18T01:54:50.932681290Z[Etc/UTC]", comments = "Generator version: 7.14.0")
 public class SubmitFeedbackResponse {
   public static final String SERIALIZED_NAME_ID = "id";
   @SerializedName(SERIALIZED_NAME_ID)
