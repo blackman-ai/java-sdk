@@ -19,12 +19,12 @@ Get semantic cache configuration for the current account
 ### Example
 ```java
 // Import classes:
-import ai.blackman.client.ApiClient;
-import ai.blackman.client.ApiException;
-import ai.blackman.client.Configuration;
-import ai.blackman.client.auth.*;
-import ai.blackman.client.models.*;
-import ai.blackman.client.api.SemanticCacheApi;
+import ai.useblackman.client.ApiClient;
+import ai.useblackman.client.ApiException;
+import ai.useblackman.client.Configuration;
+import ai.useblackman.client.auth.*;
+import ai.useblackman.client.models.*;
+import ai.useblackman.client.api.SemanticCacheApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -82,12 +82,12 @@ Get semantic cache statistics including hit rate and savings
 ### Example
 ```java
 // Import classes:
-import ai.blackman.client.ApiClient;
-import ai.blackman.client.ApiException;
-import ai.blackman.client.Configuration;
-import ai.blackman.client.auth.*;
-import ai.blackman.client.models.*;
-import ai.blackman.client.api.SemanticCacheApi;
+import ai.useblackman.client.ApiClient;
+import ai.useblackman.client.ApiException;
+import ai.useblackman.client.Configuration;
+import ai.useblackman.client.auth.*;
+import ai.useblackman.client.models.*;
+import ai.useblackman.client.api.SemanticCacheApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -145,12 +145,12 @@ Invalidate all cache entries for the current account
 ### Example
 ```java
 // Import classes:
-import ai.blackman.client.ApiClient;
-import ai.blackman.client.ApiException;
-import ai.blackman.client.Configuration;
-import ai.blackman.client.auth.*;
-import ai.blackman.client.models.*;
-import ai.blackman.client.api.SemanticCacheApi;
+import ai.useblackman.client.ApiClient;
+import ai.useblackman.client.ApiException;
+import ai.useblackman.client.Configuration;
+import ai.useblackman.client.auth.*;
+import ai.useblackman.client.models.*;
+import ai.useblackman.client.api.SemanticCacheApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -209,12 +209,12 @@ Update semantic cache configuration for the current account
 ### Example
 ```java
 // Import classes:
-import ai.blackman.client.ApiClient;
-import ai.blackman.client.ApiException;
-import ai.blackman.client.Configuration;
-import ai.blackman.client.auth.*;
-import ai.blackman.client.models.*;
-import ai.blackman.client.api.SemanticCacheApi;
+import ai.useblackman.client.ApiClient;
+import ai.useblackman.client.ApiException;
+import ai.useblackman.client.Configuration;
+import ai.useblackman.client.auth.*;
+import ai.useblackman.client.models.*;
+import ai.useblackman.client.api.SemanticCacheApi;
 
 public class Example {
   public static void main(String[] args) {

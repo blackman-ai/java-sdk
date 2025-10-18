@@ -17,7 +17,7 @@ Official Java client for [Blackman AI](https://www.useblackman.ai) - The AI API 
 
 ```xml
 <dependency>
-    <groupId>ai.blackman</groupId>
+    <groupId>ai.useblackman</groupId>
     <artifactId>client</artifactId>
     <version>0.0.5</version>
 </dependency>

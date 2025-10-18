@@ -16,12 +16,12 @@ All URIs are relative to *https://app.useblackman.ai/v1*
 ### Example
 ```java
 // Import classes:
-import ai.blackman.client.ApiClient;
-import ai.blackman.client.ApiException;
-import ai.blackman.client.Configuration;
-import ai.blackman.client.auth.*;
-import ai.blackman.client.models.*;
-import ai.blackman.client.api.CompletionsApi;
+import ai.useblackman.client.ApiClient;
+import ai.useblackman.client.ApiException;
+import ai.useblackman.client.Configuration;
+import ai.useblackman.client.auth.*;
+import ai.useblackman.client.models.*;
+import ai.useblackman.client.api.CompletionsApi;
 
 public class Example {
   public static void main(String[] args) {

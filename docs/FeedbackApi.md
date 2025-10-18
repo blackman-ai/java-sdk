@@ -16,12 +16,12 @@ Submit feedback for a completion response
 ### Example
 ```java
 // Import classes:
-import ai.blackman.client.ApiClient;
-import ai.blackman.client.ApiException;
-import ai.blackman.client.Configuration;
-import ai.blackman.client.auth.*;
-import ai.blackman.client.models.*;
-import ai.blackman.client.api.FeedbackApi;
+import ai.useblackman.client.ApiClient;
+import ai.useblackman.client.ApiException;
+import ai.useblackman.client.Configuration;
+import ai.useblackman.client.auth.*;
+import ai.useblackman.client.models.*;
+import ai.useblackman.client.api.FeedbackApi;
 
 public class Example {
   public static void main(String[] args) {

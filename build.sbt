@@ -1,6 +1,6 @@
 lazy val root = (project in file(".")).
   settings(
-    organization := "ai.blackman",
+    organization := "ai.useblackman",
     name := "client",
     version := "0.0.5",
     scalaVersion := "2.11.12",
