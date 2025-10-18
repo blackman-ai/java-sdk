@@ -48,7 +48,7 @@ import ai.blackman.client.JSON;
 /**
  * SemanticCacheStats
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-10-18T01:54:50.932681290Z[Etc/UTC]", comments = "Generator version: 7.14.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-10-18T01:59:30.368154848Z[Etc/UTC]", comments = "Generator version: 7.14.0")
 public class SemanticCacheStats {
   public static final String SERIALIZED_NAME_AVG_SIMILARITY_SCORE = "avg_similarity_score";
   @SerializedName(SERIALIZED_NAME_AVG_SIMILARITY_SCORE)
