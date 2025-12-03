@@ -19,20 +19,20 @@ Official Java client for [Blackman AI](https://www.useblackman.ai) - The AI API 
 <dependency>
     <groupId>ai.useblackman</groupId>
     <artifactId>client</artifactId>
-    <version>0.0.5</version>
+    <version>0.0.7</version>
 </dependency>
 ```
 
 ### Gradle
 
 ```groovy
-implementation 'ai.blackman:client:0.0.5'
+implementation 'ai.blackman:client:0.0.7'
 ```
 
 ### Gradle (Kotlin DSL)
 
 ```kotlin
-implementation("ai.blackman:client:0.0.5")
+implementation("ai.blackman:client:0.0.7")
 ```
 
 ## Quick Start

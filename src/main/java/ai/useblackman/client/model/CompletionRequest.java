@@ -1,6 +1,6 @@
 /*
  * Blackman AI API
- * A transparent AI API proxy that optimizes token usage to reduce costs.  ## Authentication  Blackman AI supports two authentication methods:  ### 1. API Key (Recommended for integrations)  Use the API key created from your dashboard:  ```bash curl -X POST https://ap.useblackman.ai/v1/completions \\   -H \"Authorization: Bearer sk_your_api_key_here\" \\   -H \"Content-Type: application/json\" \\   -d '{\"provider\": \"OpenAI\", \"model\": \"gpt-4\", \"messages\": [{\"role\": \"user\", \"content\": \"Hello!\"}]}' ```  ### 2. JWT Token (For web UI)  Obtain a JWT token by logging in:  ```bash curl -X POST https://ap.useblackman.ai/v1/auth/login \\   -H \"Content-Type: application/json\" \\   -d '{\"email\": \"user@example.com\", \"password\": \"yourpassword\"}' ```  Then use the token:  ```bash curl -X POST https://ap.useblackman.ai/v1/completions \\   -H \"Authorization: Bearer your_jwt_token\" \\   -H \"Content-Type: application/json\" \\   -d '{...}' ```  ### Provider API Keys (Optional)  You can optionally provide your own LLM provider API key via the `X-Provider-Api-Key` header, or store it in your account settings.  ## Client SDKs  Auto-generated SDKs are available for 10 languages:  - **TypeScript**: [View Docs](/v1/sdks/typescript) - **Python**: [View Docs](/v1/sdks/python) - **Go**: [View Docs](/v1/sdks/go) - **Java**: [View Docs](/v1/sdks/java) - **Ruby**: [View Docs](/v1/sdks/ruby) - **PHP**: [View Docs](/v1/sdks/php) - **C#**: [View Docs](/v1/sdks/csharp) - **Rust**: [View Docs](/v1/sdks/rust) - **Swift**: [View Docs](/v1/sdks/swift) - **Kotlin**: [View Docs](/v1/sdks/kotlin)  All SDKs are generated from this OpenAPI spec using [openapi-generator](https://openapi-generator.tech).  ## Quick Start  ```python # Python example with API key import blackman_client from blackman_client import CompletionRequest  configuration = blackman_client.Configuration(     host=\"http://localhost:8080\",     access_token=\"sk_your_api_key_here\"  # Your Blackman API key )  with blackman_client.ApiClient(configuration) as api_client:     api = blackman_client.CompletionsApi(api_client)     response = api.completions(         CompletionRequest(             provider=\"OpenAI\",             model=\"gpt-4o\",             messages=[{\"role\": \"user\", \"content\": \"Hello!\"}]         )     ) ```
+ * A transparent AI API proxy that optimizes token usage to reduce costs.  ## Authentication  Blackman AI supports two authentication methods:  ### 1. API Key (Recommended for integrations)  Use the API key created from your dashboard:  ```bash curl -X POST https://app.useblackman.ai/v1/completions \\   -H \"Authorization: Bearer sk_your_api_key_here\" \\   -H \"Content-Type: application/json\" \\   -d '{\"provider\": \"OpenAI\", \"model\": \"gpt-4\", \"messages\": [{\"role\": \"user\", \"content\": \"Hello!\"}]}' ```  ### 2. JWT Token (For web UI)  Obtain a JWT token by logging in:  ```bash curl -X POST https://app.useblackman.ai/v1/auth/login \\   -H \"Content-Type: application/json\" \\   -d '{\"email\": \"user@example.com\", \"password\": \"yourpassword\"}' ```  Then use the token:  ```bash curl -X POST https://app.useblackman.ai/v1/completions \\   -H \"Authorization: Bearer your_jwt_token\" \\   -H \"Content-Type: application/json\" \\   -d '{...}' ```  ### Provider API Keys (Optional)  You can optionally provide your own LLM provider API key via the `X-Provider-Api-Key` header, or store it in your account settings.  ## Client SDKs  Auto-generated SDKs are available for 10 languages:  - **TypeScript**: [View Docs](https://github.com/blackman-ai/typescript-sdk) - **Python**: [View Docs](https://github.com/blackman-ai/python-sdk) - **Go**: [View Docs](https://github.com/blackman-ai/go-sdk) - **Java**: [View Docs](https://github.com/blackman-ai/java-sdk) - **Ruby**: [View Docs](https://github.com/blackman-ai/ruby-sdk) - **PHP**: [View Docs](https://github.com/blackman-ai/php-sdk) - **C#**: [View Docs](https://github.com/blackman-ai/csharp-sdk) - **Rust**: [View Docs](https://github.com/blackman-ai/rust-sdk) - **Swift**: [View Docs](https://github.com/blackman-ai/swift-sdk) - **Kotlin**: [View Docs](https://github.com/blackman-ai/kotlin-sdk)  All SDKs are generated from this OpenAPI spec using [openapi-generator](https://openapi-generator.tech).  ## Quick Start  ```python # Python example with API key import blackman_client from blackman_client import CompletionRequest  configuration = blackman_client.Configuration(     host=\"http://localhost:8080\",     access_token=\"sk_your_api_key_here\"  # Your Blackman API key )  with blackman_client.ApiClient(configuration) as api_client:     api = blackman_client.CompletionsApi(api_client)     response = api.completions(         CompletionRequest(             provider=\"OpenAI\",             model=\"gpt-4o\",             messages=[{\"role\": \"user\", \"content\": \"Hello!\"}]         )     ) ```
  *
  * The version of the OpenAPI document: 0.1.0
  * 
@@ -53,7 +53,7 @@ import ai.useblackman.client.JSON;
 /**
  * CompletionRequest
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-10-18T02:19:39.702377316Z[Etc/UTC]", comments = "Generator version: 7.14.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-03T02:20:13.631340112Z[Etc/UTC]", comments = "Generator version: 7.14.0")
 public class CompletionRequest {
   public static final String SERIALIZED_NAME_MAX_TOKENS = "max_tokens";
   @SerializedName(SERIALIZED_NAME_MAX_TOKENS)
@@ -84,6 +84,11 @@ public class CompletionRequest {
   @SerializedName(SERIALIZED_NAME_MESSAGES)
   @javax.annotation.Nonnull
   private List<Message> messages = new ArrayList<>();
+
+  public static final String SERIALIZED_NAME_METADATA = "metadata";
+  @SerializedName(SERIALIZED_NAME_METADATA)
+  @javax.annotation.Nullable
+  private Object metadata;
 
   public static final String SERIALIZED_NAME_MODEL = "model";
   @SerializedName(SERIALIZED_NAME_MODEL)
@@ -229,6 +234,25 @@ public class CompletionRequest {
   }
 
 
+  public CompletionRequest metadata(@javax.annotation.Nullable Object metadata) {
+    this.metadata = metadata;
+    return this;
+  }
+
+  /**
+   * Optional metadata for tracking, analytics, and conditional processing. Can include session IDs, user context, feature flags, or any custom data. This metadata is logged with the request and can be used for filtering/analysis.
+   * @return metadata
+   */
+  @javax.annotation.Nullable
+  public Object getMetadata() {
+    return metadata;
+  }
+
+  public void setMetadata(@javax.annotation.Nullable Object metadata) {
+    this.metadata = metadata;
+  }
+
+
   public CompletionRequest model(@javax.annotation.Nonnull String model) {
     this.model = model;
     return this;
@@ -283,6 +307,7 @@ public class CompletionRequest {
         Objects.equals(this.temperature, completionRequest.temperature) &&
         Objects.equals(this.topP, completionRequest.topP) &&
         Objects.equals(this.messages, completionRequest.messages) &&
+        Objects.equals(this.metadata, completionRequest.metadata) &&
         Objects.equals(this.model, completionRequest.model) &&
         Objects.equals(this.provider, completionRequest.provider);
   }
@@ -293,7 +318,7 @@ public class CompletionRequest {
 
   @Override
   public int hashCode() {
-    return Objects.hash(maxTokens, stop, stream, temperature, topP, messages, model, provider);
+    return Objects.hash(maxTokens, stop, stream, temperature, topP, messages, metadata, model, provider);
   }
 
   private static <T> int hashCodeNullable(JsonNullable<T> a) {
@@ -313,6 +338,7 @@ public class CompletionRequest {
     sb.append("    temperature: ").append(toIndentedString(temperature)).append("\n");
     sb.append("    topP: ").append(toIndentedString(topP)).append("\n");
     sb.append("    messages: ").append(toIndentedString(messages)).append("\n");
+    sb.append("    metadata: ").append(toIndentedString(metadata)).append("\n");
     sb.append("    model: ").append(toIndentedString(model)).append("\n");
     sb.append("    provider: ").append(toIndentedString(provider)).append("\n");
     sb.append("}");
@@ -336,7 +362,7 @@ public class CompletionRequest {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>(Arrays.asList("max_tokens", "stop", "stream", "temperature", "top_p", "messages", "model", "provider"));
+    openapiFields = new HashSet<String>(Arrays.asList("max_tokens", "stop", "stream", "temperature", "top_p", "messages", "metadata", "model", "provider"));
 
     // a set of required properties/fields (JSON key names)
     openapiRequiredFields = new HashSet<String>(Arrays.asList("messages", "model", "provider"));
