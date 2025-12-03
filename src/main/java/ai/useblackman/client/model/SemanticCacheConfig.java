@@ -48,7 +48,7 @@ import ai.useblackman.client.JSON;
 /**
  * SemanticCacheConfig
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-03T02:20:13.631340112Z[Etc/UTC]", comments = "Generator version: 7.14.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-03T02:48:37.829099633Z[Etc/UTC]", comments = "Generator version: 7.14.0")
 public class SemanticCacheConfig {
   public static final String SERIALIZED_NAME_ENABLED = "enabled";
   @SerializedName(SERIALIZED_NAME_ENABLED)
