@@ -14,6 +14,7 @@
 package ai.useblackman.client.model;
 
 import java.util.Objects;
+import ai.useblackman.client.model.ImageUrl;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -46,58 +47,108 @@ import java.util.Set;
 import ai.useblackman.client.JSON;
 
 /**
- * SubmitFeedbackResponse
+ * ContentPartOneOf1
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-10T04:11:23.993260071Z[Etc/UTC]", comments = "Generator version: 7.14.0")
-public class SubmitFeedbackResponse {
-  public static final String SERIALIZED_NAME_ID = "id";
-  @SerializedName(SERIALIZED_NAME_ID)
+public class ContentPartOneOf1 {
+  public static final String SERIALIZED_NAME_IMAGE_URL = "image_url";
+  @SerializedName(SERIALIZED_NAME_IMAGE_URL)
   @javax.annotation.Nonnull
-  private String id;
+  private ImageUrl imageUrl;
 
-  public static final String SERIALIZED_NAME_MESSAGE = "message";
-  @SerializedName(SERIALIZED_NAME_MESSAGE)
-  @javax.annotation.Nonnull
-  private String message;
+  /**
+   * Gets or Sets type
+   */
+  @JsonAdapter(TypeEnum.Adapter.class)
+  public enum TypeEnum {
+    IMAGE_URL("image_url");
 
-  public SubmitFeedbackResponse() {
+    private String value;
+
+    TypeEnum(String value) {
+      this.value = value;
+    }
+
+    public String getValue() {
+      return value;
+    }
+
+    @Override
+    public String toString() {
+      return String.valueOf(value);
+    }
+
+    public static TypeEnum fromValue(String value) {
+      for (TypeEnum b : TypeEnum.values()) {
+        if (b.value.equals(value)) {
+          return b;
+        }
+      }
+      throw new IllegalArgumentException("Unexpected value '" + value + "'");
+    }
+
+    public static class Adapter extends TypeAdapter<TypeEnum> {
+      @Override
+      public void write(final JsonWriter jsonWriter, final TypeEnum enumeration) throws IOException {
+        jsonWriter.value(enumeration.getValue());
+      }
+
+      @Override
+      public TypeEnum read(final JsonReader jsonReader) throws IOException {
+        String value =  jsonReader.nextString();
+        return TypeEnum.fromValue(value);
+      }
+    }
+
+    public static void validateJsonElement(JsonElement jsonElement) throws IOException {
+      String value = jsonElement.getAsString();
+      TypeEnum.fromValue(value);
+    }
   }
 
-  public SubmitFeedbackResponse id(@javax.annotation.Nonnull String id) {
-    this.id = id;
+  public static final String SERIALIZED_NAME_TYPE = "type";
+  @SerializedName(SERIALIZED_NAME_TYPE)
+  @javax.annotation.Nonnull
+  private TypeEnum type;
+
+  public ContentPartOneOf1() {
+  }
+
+  public ContentPartOneOf1 imageUrl(@javax.annotation.Nonnull ImageUrl imageUrl) {
+    this.imageUrl = imageUrl;
     return this;
   }
 
   /**
-   * Get id
-   * @return id
+   * Get imageUrl
+   * @return imageUrl
    */
   @javax.annotation.Nonnull
-  public String getId() {
-    return id;
+  public ImageUrl getImageUrl() {
+    return imageUrl;
   }
 
-  public void setId(@javax.annotation.Nonnull String id) {
-    this.id = id;
+  public void setImageUrl(@javax.annotation.Nonnull ImageUrl imageUrl) {
+    this.imageUrl = imageUrl;
   }
 
 
-  public SubmitFeedbackResponse message(@javax.annotation.Nonnull String message) {
-    this.message = message;
+  public ContentPartOneOf1 type(@javax.annotation.Nonnull TypeEnum type) {
+    this.type = type;
     return this;
   }
 
   /**
-   * Get message
-   * @return message
+   * Get type
+   * @return type
    */
   @javax.annotation.Nonnull
-  public String getMessage() {
-    return message;
+  public TypeEnum getType() {
+    return type;
   }
 
-  public void setMessage(@javax.annotation.Nonnull String message) {
-    this.message = message;
+  public void setType(@javax.annotation.Nonnull TypeEnum type) {
+    this.type = type;
   }
 
 
@@ -110,22 +161,22 @@ public class SubmitFeedbackResponse {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    SubmitFeedbackResponse submitFeedbackResponse = (SubmitFeedbackResponse) o;
-    return Objects.equals(this.id, submitFeedbackResponse.id) &&
-        Objects.equals(this.message, submitFeedbackResponse.message);
+    ContentPartOneOf1 contentPartOneOf1 = (ContentPartOneOf1) o;
+    return Objects.equals(this.imageUrl, contentPartOneOf1.imageUrl) &&
+        Objects.equals(this.type, contentPartOneOf1.type);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, message);
+    return Objects.hash(imageUrl, type);
   }
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class SubmitFeedbackResponse {\n");
-    sb.append("    id: ").append(toIndentedString(id)).append("\n");
-    sb.append("    message: ").append(toIndentedString(message)).append("\n");
+    sb.append("class ContentPartOneOf1 {\n");
+    sb.append("    imageUrl: ").append(toIndentedString(imageUrl)).append("\n");
+    sb.append("    type: ").append(toIndentedString(type)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -147,68 +198,69 @@ public class SubmitFeedbackResponse {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>(Arrays.asList("id", "message"));
+    openapiFields = new HashSet<String>(Arrays.asList("image_url", "type"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>(Arrays.asList("id", "message"));
+    openapiRequiredFields = new HashSet<String>(Arrays.asList("image_url", "type"));
   }
 
   /**
    * Validates the JSON Element and throws an exception if issues found
    *
    * @param jsonElement JSON Element
-   * @throws IOException if the JSON Element is invalid with respect to SubmitFeedbackResponse
+   * @throws IOException if the JSON Element is invalid with respect to ContentPartOneOf1
    */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
-        if (!SubmitFeedbackResponse.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in SubmitFeedbackResponse is not found in the empty JSON string", SubmitFeedbackResponse.openapiRequiredFields.toString()));
+        if (!ContentPartOneOf1.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
+          throw new IllegalArgumentException(String.format("The required field(s) %s in ContentPartOneOf1 is not found in the empty JSON string", ContentPartOneOf1.openapiRequiredFields.toString()));
         }
       }
 
       Set<Map.Entry<String, JsonElement>> entries = jsonElement.getAsJsonObject().entrySet();
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
-        if (!SubmitFeedbackResponse.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `SubmitFeedbackResponse` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+        if (!ContentPartOneOf1.openapiFields.contains(entry.getKey())) {
+          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `ContentPartOneOf1` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
 
       // check to make sure all required properties/fields are present in the JSON string
-      for (String requiredField : SubmitFeedbackResponse.openapiRequiredFields) {
+      for (String requiredField : ContentPartOneOf1.openapiRequiredFields) {
         if (jsonElement.getAsJsonObject().get(requiredField) == null) {
           throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
-      if (!jsonObj.get("id").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("id").toString()));
+      // validate the required field `image_url`
+      ImageUrl.validateJsonElement(jsonObj.get("image_url"));
+      if (!jsonObj.get("type").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `type` to be a primitive type in the JSON string but got `%s`", jsonObj.get("type").toString()));
       }
-      if (!jsonObj.get("message").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `message` to be a primitive type in the JSON string but got `%s`", jsonObj.get("message").toString()));
-      }
+      // validate the required field `type`
+      TypeEnum.validateJsonElement(jsonObj.get("type"));
   }
 
   public static class CustomTypeAdapterFactory implements TypeAdapterFactory {
     @SuppressWarnings("unchecked")
     @Override
     public <T> TypeAdapter<T> create(Gson gson, TypeToken<T> type) {
-       if (!SubmitFeedbackResponse.class.isAssignableFrom(type.getRawType())) {
-         return null; // this class only serializes 'SubmitFeedbackResponse' and its subtypes
+       if (!ContentPartOneOf1.class.isAssignableFrom(type.getRawType())) {
+         return null; // this class only serializes 'ContentPartOneOf1' and its subtypes
        }
        final TypeAdapter<JsonElement> elementAdapter = gson.getAdapter(JsonElement.class);
-       final TypeAdapter<SubmitFeedbackResponse> thisAdapter
-                        = gson.getDelegateAdapter(this, TypeToken.get(SubmitFeedbackResponse.class));
+       final TypeAdapter<ContentPartOneOf1> thisAdapter
+                        = gson.getDelegateAdapter(this, TypeToken.get(ContentPartOneOf1.class));
 
-       return (TypeAdapter<T>) new TypeAdapter<SubmitFeedbackResponse>() {
+       return (TypeAdapter<T>) new TypeAdapter<ContentPartOneOf1>() {
            @Override
-           public void write(JsonWriter out, SubmitFeedbackResponse value) throws IOException {
+           public void write(JsonWriter out, ContentPartOneOf1 value) throws IOException {
              JsonObject obj = thisAdapter.toJsonTree(value).getAsJsonObject();
              elementAdapter.write(out, obj);
            }
 
            @Override
-           public SubmitFeedbackResponse read(JsonReader in) throws IOException {
+           public ContentPartOneOf1 read(JsonReader in) throws IOException {
              JsonElement jsonElement = elementAdapter.read(in);
              validateJsonElement(jsonElement);
              return thisAdapter.fromJsonTree(jsonElement);
@@ -219,18 +271,18 @@ public class SubmitFeedbackResponse {
   }
 
   /**
-   * Create an instance of SubmitFeedbackResponse given an JSON string
+   * Create an instance of ContentPartOneOf1 given an JSON string
    *
    * @param jsonString JSON string
-   * @return An instance of SubmitFeedbackResponse
-   * @throws IOException if the JSON string is invalid with respect to SubmitFeedbackResponse
+   * @return An instance of ContentPartOneOf1
+   * @throws IOException if the JSON string is invalid with respect to ContentPartOneOf1
    */
-  public static SubmitFeedbackResponse fromJson(String jsonString) throws IOException {
-    return JSON.getGson().fromJson(jsonString, SubmitFeedbackResponse.class);
+  public static ContentPartOneOf1 fromJson(String jsonString) throws IOException {
+    return JSON.getGson().fromJson(jsonString, ContentPartOneOf1.class);
   }
 
   /**
-   * Convert an instance of SubmitFeedbackResponse to an JSON string
+   * Convert an instance of ContentPartOneOf1 to an JSON string
    *
    * @return JSON string
    */

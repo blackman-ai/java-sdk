@@ -21,6 +21,7 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 import java.util.Arrays;
+import org.openapitools.jackson.nullable.JsonNullable;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
@@ -46,58 +47,58 @@ import java.util.Set;
 import ai.useblackman.client.JSON;
 
 /**
- * SubmitFeedbackResponse
+ * ImageUrl
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-10T04:11:23.993260071Z[Etc/UTC]", comments = "Generator version: 7.14.0")
-public class SubmitFeedbackResponse {
-  public static final String SERIALIZED_NAME_ID = "id";
-  @SerializedName(SERIALIZED_NAME_ID)
-  @javax.annotation.Nonnull
-  private String id;
+public class ImageUrl {
+  public static final String SERIALIZED_NAME_DETAIL = "detail";
+  @SerializedName(SERIALIZED_NAME_DETAIL)
+  @javax.annotation.Nullable
+  private String detail;
 
-  public static final String SERIALIZED_NAME_MESSAGE = "message";
-  @SerializedName(SERIALIZED_NAME_MESSAGE)
+  public static final String SERIALIZED_NAME_URL = "url";
+  @SerializedName(SERIALIZED_NAME_URL)
   @javax.annotation.Nonnull
-  private String message;
+  private String url;
 
-  public SubmitFeedbackResponse() {
+  public ImageUrl() {
   }
 
-  public SubmitFeedbackResponse id(@javax.annotation.Nonnull String id) {
-    this.id = id;
+  public ImageUrl detail(@javax.annotation.Nullable String detail) {
+    this.detail = detail;
     return this;
   }
 
   /**
-   * Get id
-   * @return id
+   * Optional detail level: \&quot;auto\&quot;, \&quot;low\&quot;, or \&quot;high\&quot;
+   * @return detail
    */
-  @javax.annotation.Nonnull
-  public String getId() {
-    return id;
+  @javax.annotation.Nullable
+  public String getDetail() {
+    return detail;
   }
 
-  public void setId(@javax.annotation.Nonnull String id) {
-    this.id = id;
+  public void setDetail(@javax.annotation.Nullable String detail) {
+    this.detail = detail;
   }
 
 
-  public SubmitFeedbackResponse message(@javax.annotation.Nonnull String message) {
-    this.message = message;
+  public ImageUrl url(@javax.annotation.Nonnull String url) {
+    this.url = url;
     return this;
   }
 
   /**
-   * Get message
-   * @return message
+   * Get url
+   * @return url
    */
   @javax.annotation.Nonnull
-  public String getMessage() {
-    return message;
+  public String getUrl() {
+    return url;
   }
 
-  public void setMessage(@javax.annotation.Nonnull String message) {
-    this.message = message;
+  public void setUrl(@javax.annotation.Nonnull String url) {
+    this.url = url;
   }
 
 
@@ -110,22 +111,33 @@ public class SubmitFeedbackResponse {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    SubmitFeedbackResponse submitFeedbackResponse = (SubmitFeedbackResponse) o;
-    return Objects.equals(this.id, submitFeedbackResponse.id) &&
-        Objects.equals(this.message, submitFeedbackResponse.message);
+    ImageUrl imageUrl = (ImageUrl) o;
+    return Objects.equals(this.detail, imageUrl.detail) &&
+        Objects.equals(this.url, imageUrl.url);
+  }
+
+  private static <T> boolean equalsNullable(JsonNullable<T> a, JsonNullable<T> b) {
+    return a == b || (a != null && b != null && a.isPresent() && b.isPresent() && Objects.deepEquals(a.get(), b.get()));
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, message);
+    return Objects.hash(detail, url);
+  }
+
+  private static <T> int hashCodeNullable(JsonNullable<T> a) {
+    if (a == null) {
+      return 1;
+    }
+    return a.isPresent() ? Arrays.deepHashCode(new Object[]{a.get()}) : 31;
   }
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class SubmitFeedbackResponse {\n");
-    sb.append("    id: ").append(toIndentedString(id)).append("\n");
-    sb.append("    message: ").append(toIndentedString(message)).append("\n");
+    sb.append("class ImageUrl {\n");
+    sb.append("    detail: ").append(toIndentedString(detail)).append("\n");
+    sb.append("    url: ").append(toIndentedString(url)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -147,45 +159,45 @@ public class SubmitFeedbackResponse {
 
   static {
     // a set of all properties/fields (JSON key names)
-    openapiFields = new HashSet<String>(Arrays.asList("id", "message"));
+    openapiFields = new HashSet<String>(Arrays.asList("detail", "url"));
 
     // a set of required properties/fields (JSON key names)
-    openapiRequiredFields = new HashSet<String>(Arrays.asList("id", "message"));
+    openapiRequiredFields = new HashSet<String>(Arrays.asList("url"));
   }
 
   /**
    * Validates the JSON Element and throws an exception if issues found
    *
    * @param jsonElement JSON Element
-   * @throws IOException if the JSON Element is invalid with respect to SubmitFeedbackResponse
+   * @throws IOException if the JSON Element is invalid with respect to ImageUrl
    */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
-        if (!SubmitFeedbackResponse.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in SubmitFeedbackResponse is not found in the empty JSON string", SubmitFeedbackResponse.openapiRequiredFields.toString()));
+        if (!ImageUrl.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
+          throw new IllegalArgumentException(String.format("The required field(s) %s in ImageUrl is not found in the empty JSON string", ImageUrl.openapiRequiredFields.toString()));
         }
       }
 
       Set<Map.Entry<String, JsonElement>> entries = jsonElement.getAsJsonObject().entrySet();
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
-        if (!SubmitFeedbackResponse.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `SubmitFeedbackResponse` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+        if (!ImageUrl.openapiFields.contains(entry.getKey())) {
+          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `ImageUrl` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
 
       // check to make sure all required properties/fields are present in the JSON string
-      for (String requiredField : SubmitFeedbackResponse.openapiRequiredFields) {
+      for (String requiredField : ImageUrl.openapiRequiredFields) {
         if (jsonElement.getAsJsonObject().get(requiredField) == null) {
           throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
-      if (!jsonObj.get("id").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("id").toString()));
+      if ((jsonObj.get("detail") != null && !jsonObj.get("detail").isJsonNull()) && !jsonObj.get("detail").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `detail` to be a primitive type in the JSON string but got `%s`", jsonObj.get("detail").toString()));
       }
-      if (!jsonObj.get("message").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `message` to be a primitive type in the JSON string but got `%s`", jsonObj.get("message").toString()));
+      if (!jsonObj.get("url").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `url` to be a primitive type in the JSON string but got `%s`", jsonObj.get("url").toString()));
       }
   }
 
@@ -193,22 +205,22 @@ public class SubmitFeedbackResponse {
     @SuppressWarnings("unchecked")
     @Override
     public <T> TypeAdapter<T> create(Gson gson, TypeToken<T> type) {
-       if (!SubmitFeedbackResponse.class.isAssignableFrom(type.getRawType())) {
-         return null; // this class only serializes 'SubmitFeedbackResponse' and its subtypes
+       if (!ImageUrl.class.isAssignableFrom(type.getRawType())) {
+         return null; // this class only serializes 'ImageUrl' and its subtypes
        }
        final TypeAdapter<JsonElement> elementAdapter = gson.getAdapter(JsonElement.class);
-       final TypeAdapter<SubmitFeedbackResponse> thisAdapter
-                        = gson.getDelegateAdapter(this, TypeToken.get(SubmitFeedbackResponse.class));
+       final TypeAdapter<ImageUrl> thisAdapter
+                        = gson.getDelegateAdapter(this, TypeToken.get(ImageUrl.class));
 
-       return (TypeAdapter<T>) new TypeAdapter<SubmitFeedbackResponse>() {
+       return (TypeAdapter<T>) new TypeAdapter<ImageUrl>() {
            @Override
-           public void write(JsonWriter out, SubmitFeedbackResponse value) throws IOException {
+           public void write(JsonWriter out, ImageUrl value) throws IOException {
              JsonObject obj = thisAdapter.toJsonTree(value).getAsJsonObject();
              elementAdapter.write(out, obj);
            }
 
            @Override
-           public SubmitFeedbackResponse read(JsonReader in) throws IOException {
+           public ImageUrl read(JsonReader in) throws IOException {
              JsonElement jsonElement = elementAdapter.read(in);
              validateJsonElement(jsonElement);
              return thisAdapter.fromJsonTree(jsonElement);
@@ -219,18 +231,18 @@ public class SubmitFeedbackResponse {
   }
 
   /**
-   * Create an instance of SubmitFeedbackResponse given an JSON string
+   * Create an instance of ImageUrl given an JSON string
    *
    * @param jsonString JSON string
-   * @return An instance of SubmitFeedbackResponse
-   * @throws IOException if the JSON string is invalid with respect to SubmitFeedbackResponse
+   * @return An instance of ImageUrl
+   * @throws IOException if the JSON string is invalid with respect to ImageUrl
    */
-  public static SubmitFeedbackResponse fromJson(String jsonString) throws IOException {
-    return JSON.getGson().fromJson(jsonString, SubmitFeedbackResponse.class);
+  public static ImageUrl fromJson(String jsonString) throws IOException {
+    return JSON.getGson().fromJson(jsonString, ImageUrl.class);
   }
 
   /**
-   * Convert an instance of SubmitFeedbackResponse to an JSON string
+   * Convert an instance of ImageUrl to an JSON string
    *
    * @return JSON string
    */

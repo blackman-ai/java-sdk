@@ -13,6 +13,7 @@
 
 package ai.useblackman.client.model;
 
+import ai.useblackman.client.model.MessageContent;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;

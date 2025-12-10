@@ -100,8 +100,13 @@ public class JSON {
         gsonBuilder.registerTypeAdapterFactory(new ai.useblackman.client.model.CompletionOptions.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new ai.useblackman.client.model.CompletionRequest.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new ai.useblackman.client.model.CompletionResponse.CustomTypeAdapterFactory());
+        gsonBuilder.registerTypeAdapterFactory(new ai.useblackman.client.model.ContentPart.CustomTypeAdapterFactory());
+        gsonBuilder.registerTypeAdapterFactory(new ai.useblackman.client.model.ContentPartOneOf.CustomTypeAdapterFactory());
+        gsonBuilder.registerTypeAdapterFactory(new ai.useblackman.client.model.ContentPartOneOf1.CustomTypeAdapterFactory());
+        gsonBuilder.registerTypeAdapterFactory(new ai.useblackman.client.model.ImageUrl.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new ai.useblackman.client.model.InvalidateResponse.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new ai.useblackman.client.model.Message.CustomTypeAdapterFactory());
+        gsonBuilder.registerTypeAdapterFactory(new ai.useblackman.client.model.MessageContent.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new ai.useblackman.client.model.SemanticCacheConfig.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new ai.useblackman.client.model.SemanticCacheStats.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new ai.useblackman.client.model.SubmitFeedbackRequest.CustomTypeAdapterFactory());

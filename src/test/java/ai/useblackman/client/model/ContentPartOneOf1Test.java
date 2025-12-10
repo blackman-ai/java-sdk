@@ -11,27 +11,47 @@
  */
 
 
-package ai.useblackman.client.auth;
+package ai.useblackman.client.model;
 
-import ai.useblackman.client.Pair;
-import ai.useblackman.client.ApiException;
+import ai.useblackman.client.model.ImageUrl;
+import com.google.gson.TypeAdapter;
+import com.google.gson.annotations.JsonAdapter;
+import com.google.gson.annotations.SerializedName;
+import com.google.gson.stream.JsonReader;
+import com.google.gson.stream.JsonWriter;
+import java.io.IOException;
+import java.util.Arrays;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
 
-import java.net.URI;
-import java.util.Map;
-import java.util.List;
+/**
+ * Model tests for ContentPartOneOf1
+ */
+public class ContentPartOneOf1Test {
+    private final ContentPartOneOf1 model = new ContentPartOneOf1();
 
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-10T04:11:23.993260071Z[Etc/UTC]", comments = "Generator version: 7.14.0")
-public interface Authentication {
     /**
-     * Apply authentication settings to header and query params.
-     *
-     * @param queryParams List of query parameters
-     * @param headerParams Map of header parameters
-     * @param cookieParams Map of cookie parameters
-     * @param payload HTTP request body
-     * @param method HTTP method
-     * @param uri URI
-     * @throws ApiException if failed to update the parameters
+     * Model tests for ContentPartOneOf1
      */
-    void applyToParams(List<Pair> queryParams, Map<String, String> headerParams, Map<String, String> cookieParams, String payload, String method, URI uri) throws ApiException;
+    @Test
+    public void testContentPartOneOf1() {
+        // TODO: test ContentPartOneOf1
+    }
+
+    /**
+     * Test the property 'imageUrl'
+     */
+    @Test
+    public void imageUrlTest() {
+        // TODO: test imageUrl
+    }
+
+    /**
+     * Test the property 'type'
+     */
+    @Test
+    public void typeTest() {
+        // TODO: test type
+    }
+
 }

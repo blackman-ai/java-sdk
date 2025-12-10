@@ -14,6 +14,7 @@
 package ai.useblackman.client.model;
 
 import java.util.Objects;
+import ai.useblackman.client.model.MessageContent;
 import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
@@ -48,12 +49,12 @@ import ai.useblackman.client.JSON;
 /**
  * Message
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-03T03:01:31.963210652Z[Etc/UTC]", comments = "Generator version: 7.14.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-10T04:11:23.993260071Z[Etc/UTC]", comments = "Generator version: 7.14.0")
 public class Message {
   public static final String SERIALIZED_NAME_CONTENT = "content";
   @SerializedName(SERIALIZED_NAME_CONTENT)
   @javax.annotation.Nonnull
-  private String content;
+  private MessageContent content;
 
   public static final String SERIALIZED_NAME_ROLE = "role";
   @SerializedName(SERIALIZED_NAME_ROLE)
@@ -63,7 +64,7 @@ public class Message {
   public Message() {
   }
 
-  public Message content(@javax.annotation.Nonnull String content) {
+  public Message content(@javax.annotation.Nonnull MessageContent content) {
     this.content = content;
     return this;
   }
@@ -73,11 +74,11 @@ public class Message {
    * @return content
    */
   @javax.annotation.Nonnull
-  public String getContent() {
+  public MessageContent getContent() {
     return content;
   }
 
-  public void setContent(@javax.annotation.Nonnull String content) {
+  public void setContent(@javax.annotation.Nonnull MessageContent content) {
     this.content = content;
   }
 
@@ -181,9 +182,8 @@ public class Message {
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
-      if (!jsonObj.get("content").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `content` to be a primitive type in the JSON string but got `%s`", jsonObj.get("content").toString()));
-      }
+      // validate the required field `content`
+      MessageContent.validateJsonElement(jsonObj.get("content"));
       if (!jsonObj.get("role").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `role` to be a primitive type in the JSON string but got `%s`", jsonObj.get("role").toString()));
       }

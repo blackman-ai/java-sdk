@@ -11,27 +11,25 @@
  */
 
 
-package ai.useblackman.client.auth;
+package ai.useblackman.client.model;
 
-import ai.useblackman.client.Pair;
-import ai.useblackman.client.ApiException;
-
-import java.net.URI;
-import java.util.Map;
+import ai.useblackman.client.model.ContentPart;
 import java.util.List;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
 
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2025-12-10T04:11:23.993260071Z[Etc/UTC]", comments = "Generator version: 7.14.0")
-public interface Authentication {
+/**
+ * Model tests for MessageContent
+ */
+public class MessageContentTest {
+    private final MessageContent model = new MessageContent();
+
     /**
-     * Apply authentication settings to header and query params.
-     *
-     * @param queryParams List of query parameters
-     * @param headerParams Map of header parameters
-     * @param cookieParams Map of cookie parameters
-     * @param payload HTTP request body
-     * @param method HTTP method
-     * @param uri URI
-     * @throws ApiException if failed to update the parameters
+     * Model tests for MessageContent
      */
-    void applyToParams(List<Pair> queryParams, Map<String, String> headerParams, Map<String, String> cookieParams, String payload, String method, URI uri) throws ApiException;
+    @Test
+    public void testMessageContent() {
+        // TODO: test MessageContent
+    }
+
 }

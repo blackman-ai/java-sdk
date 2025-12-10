@@ -6,7 +6,7 @@
 
     <groupId>ai.useblackman</groupId>
     <artifactId>client</artifactId>
-    <version>0.0.9</version>
+    <version>0.0.10</version>
     <packaging>jar</packaging>
 
     <name>Blackman AI Java SDK</name>
